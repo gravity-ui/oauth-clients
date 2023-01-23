@@ -22,8 +22,7 @@
     "lint": "run-p lint:*",
     "typecheck": "tsc --noEmit",
     "test": "jest",
-    "build": "tsc",
-    "start": "TS_NODE_PROJECT=.storybook/tsconfig.json start-storybook"
+    "build": "tsc"
   },
   "dependencies": {},
   "devDependencies": {
@@ -33,15 +32,12 @@
     "@gravity-ui/prettier-config": "^1.0.0",
     "@gravity-ui/stylelint-config": "^1.0.0",
     "@gravity-ui/tsconfig": "^1.0.0",
-    "@storybook/addon-essentials": "^6.0.0",
-    "@storybook/preset-scss": "^1.0.0",
-    "@storybook/react": "^6.0.0",
     "@types/jest": "^28.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "eslint": "^8.0.0",
-    "jest": "^28.0.0",
     "husky": "^8.0.0",
+    "jest": "^28.0.0",
     "nano-staged": "^0.6.0",
     "npm-run-all": "^4.0.0",
     "prettier": "^2.0.0",

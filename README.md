@@ -1,4 +1,4 @@
-# @gravity-ui/oauth-clients &middot; [![npm package](https://img.shields.io/npm/v/@gravity-ui/oauth-clients)](https://www.npmjs.com/package/@gravity-ui/oauth-clients) [![CI](https://img.shields.io/github/workflow/status/gravity-ui/oauth-clients/CI/main?label=CI&logo=github)](https://github.com/gravity-ui/oauth-clients/actions/workflows/ci.yml?query=branch:main) [![storybook](https://img.shields.io/badge/Storybook-deployed-ff4685)](https://preview.yandexcloud.dev/oauth-clients/)
+# @gravity-ui/oauth-clients &middot; [![npm package](https://img.shields.io/npm/v/@gravity-ui/oauth-clients)](https://www.npmjs.com/package/@gravity-ui/oauth-clients) [![CI](https://img.shields.io/github/workflow/status/gravity-ui/oauth-clients/CI/main?label=CI&logo=github)](https://github.com/gravity-ui/oauth-clients/actions/workflows/ci.yml?query=branch:main)
 
 This is a template for typical package. 
 
