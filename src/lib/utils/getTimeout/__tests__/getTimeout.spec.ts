@@ -1,4 +1,4 @@
-import {getTimeout} from './getTimeout';
+import {getTimeout} from '../getTimeout';
 
 beforeEach(() => jest.useFakeTimers());
 afterEach(() => jest.useRealTimers());

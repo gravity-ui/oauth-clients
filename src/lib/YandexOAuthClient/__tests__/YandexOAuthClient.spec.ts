@@ -1,4 +1,4 @@
-import {YandexOAuthClient} from './YandexOAuthClient';
+import {YandexOAuthClient} from '../YandexOAuthClient';
 
 const ogWindow = window.open;
 const windowOpenMock = {
