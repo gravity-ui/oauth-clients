@@ -18,7 +18,6 @@
   "scripts": {
     "prepare": "husky install",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "lint:styles": "stylelint 'src/**/*.scss'",
     "lint": "run-p lint:*",
     "typecheck": "tsc --noEmit",
     "test": "jest",
@@ -43,7 +42,6 @@
     "prettier": "^2.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "stylelint": "^14.0.0",
     "ts-jest": "^28.0.0",
     "typescript": "^4.0.0"
   },
