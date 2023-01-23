@@ -5,5 +5,5 @@ Client for Yandex oAuth, and base client for oAuth code flow.
 ## Install
 
 ```shell
-npm install --save-dev @gravity-ui/oauth-clients
+npm install @gravity-ui/oauth-clients
 ```
