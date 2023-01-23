@@ -9,5 +9,5 @@ module.exports = {
     },
     transformIgnorePatterns: ['node_modules/(?!(@gravity-ui|nanoid)/)'],
     coverageDirectory: './coverage',
-    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!**/__stories__/**/*', '!**/*/*.stories.{ts,tsx}'],
+    collectCoverageFrom: ['src/**/*.{ts,tsx}'],
 };
