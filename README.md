@@ -1,4 +1,4 @@
-# @gravity-ui/package-example &middot; [![npm package](https://img.shields.io/npm/v/@gravity-ui/package-example)](https://www.npmjs.com/package/@gravity-ui/package-example) [![CI](https://img.shields.io/github/workflow/status/gravity-ui/package-example/CI/main?label=CI&logo=github)](https://github.com/gravity-ui/package-example/actions/workflows/ci.yml?query=branch:main) [![storybook](https://img.shields.io/badge/Storybook-deployed-ff4685)](https://preview.yandexcloud.dev/package-example/)
+# @gravity-ui/oauth-clients &middot; [![npm package](https://img.shields.io/npm/v/@gravity-ui/oauth-clients)](https://www.npmjs.com/package/@gravity-ui/oauth-clients) [![CI](https://img.shields.io/github/workflow/status/gravity-ui/oauth-clients/CI/main?label=CI&logo=github)](https://github.com/gravity-ui/oauth-clients/actions/workflows/ci.yml?query=branch:main) [![storybook](https://img.shields.io/badge/Storybook-deployed-ff4685)](https://preview.yandexcloud.dev/oauth-clients/)
 
 This is a template for typical package. 
 
@@ -9,7 +9,7 @@ This is a template for typical package.
 ## Install
 
 ```shell
-npm install --save-dev @gravity-ui/package-example
+npm install --save-dev @gravity-ui/oauth-clients
 ```
 
 ## Usage
