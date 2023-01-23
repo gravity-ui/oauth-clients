@@ -15,6 +15,7 @@ const windowOpenMock = {
 
 const oAuthRandomString = '345';
 jest.mock('nanoid', () => {
+    const oAuthRandomString = '345';
     const nanoid = jest.requireActual('nanoid');
 
     return {
