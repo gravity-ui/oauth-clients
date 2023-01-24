@@ -24,7 +24,8 @@
     "test": "jest",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test && npm run build"
   },
   "dependencies": {
     "nanoid": "^3.0.0 || ^4.0.0"
