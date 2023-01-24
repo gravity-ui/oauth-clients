@@ -13,8 +13,8 @@ interface Options {
 export class YandexOAuthClient extends OAuthClient<ReturnType<typeof getAuthStatus>> {
     protected readonly clientId: string;
     protected readonly redirectUri: string | undefined;
-    protected readonly host = 'https://oauth.yandex.ru';
-    protected readonly windowName = 'YandexOAuthCodeWindow';
+    protected readonly host: string = 'https://oauth.yandex.ru';
+    protected readonly windowName: string = 'YandexOAuthCodeWindow';
     protected readonly windowSize = {
         // magic number, width at which oAuth got proper breakpoint
         width: 480,
