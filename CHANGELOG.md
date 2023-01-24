@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/gravity-ui/oauth-clients/compare/v1.0.2...v1.0.3) (2023-01-24)
+
+
+### Bug Fixes
+
+* **YandexOAuthClient:** types ([#8](https://github.com/gravity-ui/oauth-clients/issues/8)) ([4351f4f](https://github.com/gravity-ui/oauth-clients/commit/4351f4f099f4ccf35b7e39926ca65fec0361664b))
+
 ## [1.0.2](https://github.com/gravity-ui/oauth-clients/compare/v1.0.1...v1.0.2) (2023-01-24)
 
 
