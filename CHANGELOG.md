@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/gravity-ui/oauth-clients/compare/v1.0.1...v1.0.2) (2023-01-24)
+
+
+### Bug Fixes
+
+* build before publish ([#6](https://github.com/gravity-ui/oauth-clients/issues/6)) ([c45f2a2](https://github.com/gravity-ui/oauth-clients/commit/c45f2a2b6c801e28cf135736260451ba7765e5f4))
+
 ## [1.0.1](https://github.com/gravity-ui/oauth-clients/compare/v1.0.0...v1.0.1) (2023-01-23)
 
 
