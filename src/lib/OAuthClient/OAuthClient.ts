@@ -3,7 +3,7 @@ import {TimeoutError} from '../TimeoutError/TimeoutError';
 import {getTimeout} from '../utils/getTimeout/getTimeout';
 import {getTimeoutCheck} from '../utils/getTimeoutCheck/getTimeoutCheck';
 
-import {getWindow} from './getWindow';
+import {getWindowAsync} from './getWindowAsync';
 
 export abstract class OAuthClient<T = unknown> {
     protected abstract readonly windowName: string;
@@ -22,12 +22,15 @@ export abstract class OAuthClient<T = unknown> {
     /**
      * Resolves auth code for user
      */
-    authorize() {
-        const oAuthWindow = getWindow(this.url, this.windowName, this.windowSize);
+    async authorize() {
+        this.createController();
 
-        if (!oAuthWindow) {
-            throw new Error('BaseOAuthClient: failed to open window');
-        }
+        const oAuthWindow = await getWindowAsync(
+            this.url,
+            this.windowName,
+            this.windowSize,
+            this.abortController?.signal,
+        );
 
         return this.pollWindow(oAuthWindow).finally(() => {
             try {
@@ -38,8 +41,9 @@ export abstract class OAuthClient<T = unknown> {
     }
 
     private async pollWindow(oAuthWindow: Window) {
-        this.stopPolling();
-        this.abortController = new AbortController();
+        if (!this.abortController) {
+            throw new Error('BaseOAuthClient: controller is not created');
+        }
 
         const timeIsExceed = getTimeoutCheck(this.timeout);
         let code: string | undefined;
@@ -80,6 +84,11 @@ export abstract class OAuthClient<T = unknown> {
         }
 
         return code;
+    }
+
+    private createController() {
+        this.stopPolling();
+        this.abortController = new AbortController();
     }
 
     private stopPolling() {
