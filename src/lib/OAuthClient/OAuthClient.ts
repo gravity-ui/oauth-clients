@@ -3,7 +3,7 @@ import {TimeoutError} from '../TimeoutError/TimeoutError';
 import {getTimeout} from '../utils/getTimeout/getTimeout';
 import {getTimeoutCheck} from '../utils/getTimeoutCheck/getTimeoutCheck';
 
-import {getWindow} from './getWindow';
+import {getWindowAsync} from './getWindowAsync';
 
 export abstract class OAuthClient<T = unknown> {
     protected abstract readonly windowName: string;
@@ -22,12 +22,8 @@ export abstract class OAuthClient<T = unknown> {
     /**
      * Resolves auth code for user
      */
-    authorize() {
-        const oAuthWindow = getWindow(this.url, this.windowName, this.windowSize);
-
-        if (!oAuthWindow) {
-            throw new Error('BaseOAuthClient: failed to open window');
-        }
+    async authorize() {
+        const oAuthWindow = await getWindowAsync(this.url, this.windowName, this.windowSize);
 
         return this.pollWindow(oAuthWindow).finally(() => {
             try {
