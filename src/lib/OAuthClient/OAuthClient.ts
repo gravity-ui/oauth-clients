@@ -23,7 +23,14 @@ export abstract class OAuthClient<T = unknown> {
      * Resolves auth code for user
      */
     async authorize() {
-        const oAuthWindow = await getWindowAsync(this.url, this.windowName, this.windowSize);
+        this.createController();
+
+        const oAuthWindow = await getWindowAsync(
+            this.url,
+            this.windowName,
+            this.windowSize,
+            this.abortController?.signal,
+        );
 
         return this.pollWindow(oAuthWindow).finally(() => {
             try {
@@ -34,8 +41,9 @@ export abstract class OAuthClient<T = unknown> {
     }
 
     private async pollWindow(oAuthWindow: Window) {
-        this.stopPolling();
-        this.abortController = new AbortController();
+        if (!this.abortController) {
+            throw new Error('BaseOAuthClient: controller is not created');
+        }
 
         const timeIsExceed = getTimeoutCheck(this.timeout);
         let code: string | undefined;
@@ -76,6 +84,11 @@ export abstract class OAuthClient<T = unknown> {
         }
 
         return code;
+    }
+
+    private createController() {
+        this.stopPolling();
+        this.abortController = new AbortController();
     }
 
     private stopPolling() {

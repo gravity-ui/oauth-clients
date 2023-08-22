@@ -29,7 +29,7 @@ test('should throw w/out `clientId`', () => {
     expect(() => new YandexOAuthClient({clientId: ''})).toThrow();
 });
 
-test('should handle window.open failure', () => {
+test('should handle window.open failure', async () => {
     const windowOpen = windowOpenMock.install();
     windowOpen.mockReturnValue(null);
 
@@ -37,7 +37,7 @@ test('should handle window.open failure', () => {
         clientId: '123',
     });
 
-    expect(() => client.authorize()).toThrowError('OAuthClient: failed to open window');
+    await expect(() => client.authorize()).rejects.toThrowError('Failed to open window');
 
     client.destroy();
 });
@@ -76,8 +76,7 @@ test('should abort incomplete authorization', async () => {
     const authorization = client.authorize();
     client.destroy();
 
-    await expect(authorization).rejects.toThrowError('getTimeout: cancelled');
-    expect(windowCloseMock).toHaveBeenCalled();
+    await expect(authorization).rejects.toThrowError('getWindowAsync: cancelled');
 });
 
 test('should throw when "state" not matching', async () => {
