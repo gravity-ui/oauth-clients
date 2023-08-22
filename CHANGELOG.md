@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/gravity-ui/oauth-clients/compare/v1.0.3...v1.1.0) (2023-08-22)
+
+
+### Features
+
+* make `window.open` async ([#14](https://github.com/gravity-ui/oauth-clients/issues/14)) ([1f574e7](https://github.com/gravity-ui/oauth-clients/commit/1f574e7ebf72047326d7a59f9c97e2321822545b))
+
 ## [1.0.3](https://github.com/gravity-ui/oauth-clients/compare/v1.0.2...v1.0.3) (2023-01-24)
 
 
